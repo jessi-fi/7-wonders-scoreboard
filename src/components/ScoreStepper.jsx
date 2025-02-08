@@ -131,6 +131,18 @@ export default function ScoreStepper({ showError }) {
                         label='Score'
                         value={scores[activeStep]}
                         onChange={(e) => handleScoreInput(activeStep, e.target.value)}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                                e.preventDefault()
+                                if (activeStep < maxSteps - 1) {
+                                    setActiveStep((prevStep) => prevStep + 1)
+                                }
+                                else {
+                                    handleSendButton(steps, scores, setLoading, navigate, showError)
+                                }
+                            }
+                        }}
+                        autoFocus
                         sx={{
                             width: '7ch',
                         }} />

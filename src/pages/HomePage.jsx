@@ -69,10 +69,7 @@ export default function HomePage() {
 
                 {/* Player name-texts */}
                 <Typography
-                    variant='body1'
-                    sx={{
-                        marginTop: 1,
-                    }}>
+                    variant='body1'>
                     <PersonIcon
                         sx={{
                             marginRight: 1,
@@ -100,7 +97,6 @@ export default function HomePage() {
                 <Typography
                     variant='body1'
                     sx={{
-                        marginTop: 1,
                         marginBottom: 1,
                         maxWidth: '90%',
                         marginX: 'auto',
@@ -150,7 +146,7 @@ export default function HomePage() {
                             loading={loading}
                             sx={{
                                 marginTop: 4.5,
-                                backgroundColor: 'rgb(226, 199, 99)',
+                                backgroundColor: 'rgb(219, 201, 102)',
                             }}>
                             Create
                         </Button>
@@ -186,7 +182,7 @@ export default function HomePage() {
                             onClick={() => handleJoinButton(name, code, setLoading, navigate, showError)}
                             loading={loading}
                             sx={{
-                                backgroundColor: 'rgb(226, 199, 99)',
+                                backgroundColor: 'rgb(219, 201, 102)',
                                 marginTop: 1,
                             }}>
                             Join

@@ -6,8 +6,8 @@ import { createTheme } from '@mui/material/styles'
 // Darker gray 'rgb(46, 46, 46)',
 // Light gray 'rgb(221, 221, 221)',
 // Lighter gray 'rgb(247, 247, 247)',
-// Yellow 'rgb(226, 199, 99)',
-// Gold 'rgb(202, 178, 92)',
+// Gold 'rgb(219, 201, 102)',
+// Darker gold 'rgb(202, 178, 92)',
 
 const AppTheme = createTheme({
 

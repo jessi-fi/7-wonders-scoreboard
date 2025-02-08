@@ -61,7 +61,7 @@ export default function FooterBar() {
                         onClick={() => navigate('/7-wonders-scoreboard/results')}
                         sx={{
                             marginTop: 1,
-                            backgroundColor: 'rgb(226, 199, 99)',
+                            backgroundColor: 'rgb(219, 201, 102)',
                         }}>
                         Return to the results
                     </Button>

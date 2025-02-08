@@ -75,7 +75,7 @@ export default function HeaderBar() {
                         onClick={() => navigate('/7-wonders-scoreboard/')}
                         sx={{
                             marginBottom: 1,
-                            backgroundColor: 'rgb(226, 199, 99)',
+                            backgroundColor: 'rgb(219, 201, 102)',
                         }}>
                         Home
                     </Button>

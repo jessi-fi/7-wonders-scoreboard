@@ -22,7 +22,7 @@ export default function FooterBar() {
         <>
             <Box
                 sx={{
-                    height: 200,
+                    height: 240,
                     position: 'relative',
                 }}>
 
@@ -31,7 +31,7 @@ export default function FooterBar() {
                     sx={{
                         position: 'absolute',
                         width: '100%',
-                        height: 200,
+                        height: 240,
                         backgroundColor: 'white',
                         backgroundImage: `url(${WondersImage2})`,
                         backgroundSize: 'cover',
@@ -64,18 +64,6 @@ export default function FooterBar() {
                             backgroundColor: 'rgb(231, 217, 89)',
                         }}>
                         Return to the results
-                    </Button>
-                    <br />
-
-                    {/* Scores-button */}
-                    <Button
-                        variant='contained'
-                        onClick={() => navigate('/7-wonders-scoreboard/scores')}
-                        sx={{
-                            marginTop: 3,
-                            backgroundColor: 'rgb(231, 217, 89)',
-                        }}>
-                        Continue adding the scores
                     </Button>
                     <br />
 

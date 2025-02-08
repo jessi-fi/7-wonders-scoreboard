@@ -192,6 +192,18 @@ export default function HomePage() {
                         </Button>
                     </Box>
                 </Box>
+
+                {/* Scores-button */}
+                <Button
+                    onClick={() => navigate('/7-wonders-scoreboard/scores')}
+                    sx={{
+                        my: 1,
+                        textDecoration: 'underline',
+                        color: 'rgb(202, 178, 92)',
+                    }}>
+                    Continue adding the unfinished scores
+                </Button>
+                <br />
             </Box>
 
             {/* Error alert */}

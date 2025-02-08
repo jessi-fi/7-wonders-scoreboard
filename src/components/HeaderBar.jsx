@@ -14,7 +14,7 @@ export default function HeaderBar() {
         <>
             <Box
                 sx={{
-                    height: 200,
+                    height: 240,
                     position: 'relative',
                 }}>
 
@@ -23,7 +23,7 @@ export default function HeaderBar() {
                     sx={{
                         position: 'absolute',
                         width: '100%',
-                        height: 200,
+                        height: 240,
                         backgroundColor: 'white',
                         backgroundImage: `url(${WondersImage1})`,
                         backgroundSize: 'cover',
@@ -61,12 +61,12 @@ export default function HeaderBar() {
                         variant="body2"
                         sx={{
                             color: 'rgb(247, 247, 247)',
-                            maxWidth: '80%',
+                            maxWidth: '100%',
                             marginX: 'auto',
                             marginTop: 1,
                             marginBottom: 3,
                         }}>
-                        Find out who is the 7 Wonders champion. Good luck!
+                        Find out who is the 7 Wonders champion.
                     </Typography>
 
                     {/* Home-button */}

@@ -66,7 +66,7 @@ export default function HeaderBar() {
                             marginTop: 1,
                             marginBottom: 3,
                         }}>
-                        Find out who is the 7 Wonders champion.
+                        Find out who is the 7 Wonders champion!
                     </Typography>
 
                     {/* Home-button */}

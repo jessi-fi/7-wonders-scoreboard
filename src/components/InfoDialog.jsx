@@ -17,7 +17,7 @@ export default function InfoDialog({ open, handleClose }) {
                         backgroundColor: 'rgb(46, 46, 46)',
                         color: 'rgb(202, 178, 92)',
                     }}>
-                    App Info
+                    <strong>App Info</strong>
                 </DialogTitle>
 
                 {/* Close-iconbutton */}
@@ -46,7 +46,7 @@ export default function InfoDialog({ open, handleClose }) {
                             color: 'rgb(247, 247, 247)',
                             marginBottom: 1,
                         }}>
-                        About app
+                        <strong>About app</strong>
                     </Typography>
 
                     {/* Info-text */}
@@ -72,7 +72,7 @@ export default function InfoDialog({ open, handleClose }) {
                             color: 'rgb(247, 247, 247)',
                             marginBottom: 1,
                         }}>
-                        Data usage
+                        <strong>Data usage</strong>
                     </Typography>
 
                     {/* Data-text */}

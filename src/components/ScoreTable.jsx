@@ -51,12 +51,12 @@ function Row({ row }) {
 
                 {/* Player name-text */}
                 <TableCell align='left'>
-                    {row.player}
+                    <strong>{row.player}</strong>
                 </TableCell>
 
                 {/* Final scores-text */}
                 <TableCell align='center'>
-                    <strong>{row.finalScores}</strong>
+                    {row.finalScores}
                 </TableCell>
 
                 {/* All scores-button */}
@@ -121,7 +121,7 @@ function Row({ row }) {
                                                             height: 'auto',
                                                             verticalAlign: 'middle',
                                                         }} />
-                                                    {key.charAt(0).toUpperCase() + key.slice(1)}
+                                                    <strong>{key.charAt(0).toUpperCase() + key.slice(1)}</strong>
                                                 </TableCell>
 
                                                 {/* Score */}
@@ -130,7 +130,7 @@ function Row({ row }) {
                                                     sx={{
                                                         width: '20%',
                                                     }}>
-                                                    <strong>{row[key]}</strong>
+                                                    {row[key]}
                                                 </TableCell>
                                             </TableRow>
                                         )
@@ -186,14 +186,14 @@ export default function CollapsibleTable({ rows = [], loading }) {
                                     marginLeft: 1,
                                 }} />
                             <br />
-                            Player
+                            <strong>Player</strong>
                         </TableCell>
 
                         {/* Final scores-title */}
                         <TableCell align='center'>
                             <EmojiEventsIcon />
                             <br />
-                            Final Scores
+                            <strong>Final Scores</strong>
                         </TableCell>
 
                         {/* All scores-title */}
@@ -203,7 +203,7 @@ export default function CollapsibleTable({ rows = [], loading }) {
                                     marginRight: 2,
                                 }} />
                             <br />
-                            All Scores
+                            <strong>All Scores</strong>
                         </TableCell>
                     </TableRow>
                 </TableHead>

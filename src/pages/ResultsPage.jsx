@@ -69,7 +69,7 @@ export default function ResultsPage() {
                     Room Code
                 </Typography>
                 <Typography variant='h6'>
-                    {room}
+                    <strong>{room}</strong>
                 </Typography>
 
                 {/* Scoreboard */}

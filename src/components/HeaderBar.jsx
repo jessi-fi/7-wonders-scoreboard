@@ -53,7 +53,7 @@ export default function HeaderBar() {
                         sx={{
                             color: 'rgb(202, 178, 92)',
                         }}>
-                        7 Wonders Scoreboard
+                        <strong>7 Wonders Scoreboard</strong>
                     </Typography>
 
                     {/* Title-text */}
@@ -75,7 +75,7 @@ export default function HeaderBar() {
                         onClick={() => navigate('/7-wonders-scoreboard/')}
                         sx={{
                             marginBottom: 1,
-                            backgroundColor: 'rgb(231, 217, 89)',
+                            backgroundColor: 'rgb(226, 199, 99)',
                         }}>
                         Home
                     </Button>

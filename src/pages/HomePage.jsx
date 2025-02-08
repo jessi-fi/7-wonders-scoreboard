@@ -6,6 +6,7 @@ import { Box, Typography, TextField, Button } from '@mui/material/'
 // MUI icon imports
 import PersonIcon from '@mui/icons-material/Person'
 import PersonAddIcon from '@mui/icons-material/PersonAdd'
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight'
 // Internal style imports
 import BoxStyle from '../styles/BoxStyle.jsx'
 // Internal component imports
@@ -76,7 +77,7 @@ export default function HomePage() {
                         sx={{
                             marginRight: 1,
                         }} />
-                    Add a player name.
+                    <strong>Add a player name.</strong>
                 </Typography>
                 <Typography variant='caption'>
                     (3-12 letters)
@@ -108,7 +109,7 @@ export default function HomePage() {
                         sx={{
                             marginRight: 1,
                         }} />
-                    Create a new room or join an existing one.
+                    <strong>Create a new room or join an existing one.</strong>
                 </Typography>
 
                 {/* Button-content */}
@@ -149,7 +150,7 @@ export default function HomePage() {
                             loading={loading}
                             sx={{
                                 marginTop: 4.5,
-                                backgroundColor: 'rgb(231, 217, 89)'
+                                backgroundColor: 'rgb(226, 199, 99)',
                             }}>
                             Create
                         </Button>
@@ -185,7 +186,7 @@ export default function HomePage() {
                             onClick={() => handleJoinButton(name, code, setLoading, navigate, showError)}
                             loading={loading}
                             sx={{
-                                backgroundColor: 'rgb(231, 217, 89)',
+                                backgroundColor: 'rgb(226, 199, 99)',
                                 marginTop: 1,
                             }}>
                             Join
@@ -193,17 +194,20 @@ export default function HomePage() {
                     </Box>
                 </Box>
 
+                {/* Scores-text */}
+                <Typography
+                    variant='body1'
+                    sx={{
+                        marginTop: 1,
+                    }}>
+                    <strong>Continue adding the unfinished scores</strong>
+                </Typography>
+
                 {/* Scores-button */}
                 <Button
-                    onClick={() => navigate('/7-wonders-scoreboard/scores')}
-                    sx={{
-                        my: 1,
-                        textDecoration: 'underline',
-                        color: 'rgb(202, 178, 92)',
-                    }}>
-                    Continue adding the unfinished scores
+                    onClick={() => navigate('/7-wonders-scoreboard/scores')}>
+                    <KeyboardDoubleArrowRightIcon />
                 </Button>
-                <br />
             </Box>
 
             {/* Error alert */}

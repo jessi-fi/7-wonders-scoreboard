@@ -73,7 +73,7 @@ export default function ScoresPage() {
                     Room Code
                 </Typography>
                 <Typography variant='h6'>
-                    {room}
+                    <strong>{room}</strong>
                 </Typography>
                 <Typography variant='caption'>
                     Player: <strong>{player}</strong>

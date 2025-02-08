@@ -11,7 +11,7 @@ export default function ErrorPage() {
 
                 {/* Error-content */}
                 <Typography variant='body1'>
-                    Error, page not found.
+                    <strong>Error, page not found.</strong>
                 </Typography>
             </Box>
         </>

@@ -89,7 +89,7 @@ export default function ScoreStepper({ showError }) {
                 {/* Score category-text */}
                 <Typography variant='body1'>
                     <CreateIcon />
-                    Add the <strong>{steps[activeStep]}</strong> score.
+                    <strong>Add the {steps[activeStep]} score.</strong>
                 </Typography>
 
                 {/* Score category-content */}
@@ -179,7 +179,10 @@ export default function ScoreStepper({ showError }) {
                             onClick={() => handleSendButton(steps, scores, setLoading, navigate, showError)}
                             loading={loading}
                             loadingPosition='end'
-                            endIcon={<KeyboardDoubleArrowRightIcon />}
+                            endIcon={<KeyboardDoubleArrowRightIcon
+                                sx={{
+                                    marginBottom: 0.3,
+                                }} />}
                             sx={{
                                 marginTop: 3,
                                 mx: 2,
@@ -196,9 +199,15 @@ export default function ScoreStepper({ showError }) {
                             }}>
                             Next
                             {theme.direction === 'rtl' ? (
-                                <KeyboardArrowLeftIcon />
+                                <KeyboardArrowLeftIcon
+                                    sx={{
+                                        marginBottom: 0.3,
+                                    }} />
                             ) : (
-                                <KeyboardArrowRightIcon />
+                                <KeyboardArrowRightIcon
+                                    sx={{
+                                        marginBottom: 0.3,
+                                    }} />
                             )}
                         </Button>
                     )
@@ -214,9 +223,15 @@ export default function ScoreStepper({ showError }) {
                             mx: 2,
                         }}>
                         {theme.direction === 'rtl' ? (
-                            <KeyboardArrowRightIcon />
+                            <KeyboardArrowRightIcon
+                                sx={{
+                                    marginBottom: 0.3,
+                                }} />
                         ) : (
-                            <KeyboardArrowLeftIcon />
+                            <KeyboardArrowLeftIcon
+                                sx={{
+                                    marginBottom: 0.3,
+                                }} />
                         )}
                         Back
                     </Button>

@@ -22,8 +22,10 @@ export default function FooterBar() {
         <>
             <Box
                 sx={{
-                    height: 240,
+                    height: 120,
                     position: 'relative',
+                    width: '100%',
+                    marginTop: 'auto',
                 }}>
 
                 {/* Footer background */}
@@ -31,7 +33,7 @@ export default function FooterBar() {
                     sx={{
                         position: 'absolute',
                         width: '100%',
-                        height: 240,
+                        height: 120,
                         backgroundColor: 'white',
                         backgroundImage: `url(${WondersImage2})`,
                         backgroundSize: 'cover',
@@ -40,44 +42,42 @@ export default function FooterBar() {
                         zIndex: 1,
                     }} />
 
-                {/* Button/info-content */}
+                {/* Info-content */}
                 <Box
                     sx={{
                         position: 'absolute',
                         top: '50%',
                         left: '50%',
                         transform: 'translate(-50%, -50%)',
-                        backgroundColor: 'rgba(46, 46, 46, 0.7)',
-                        padding: 2,
-                        borderRadius: 2,
                         textAlign: 'center',
                         width: 300,
                         zIndex: 2,
                     }}>
 
-                    {/* Results-button */}
+                    {/* Home-button */}
                     <Button
                         variant='contained'
-                        onClick={() => navigate('/7-wonders-scoreboard/results')}
+                        onClick={() => navigate('/7-wonders-scoreboard/')}
                         sx={{
-                            marginTop: 1,
-                            backgroundColor: 'rgb(219, 201, 102)',
+                            backgroundColor: 'rgb(202, 178, 92)',
+                            color: 'rgb(247, 247, 247)',
+                            marginBottom: 1,
+                            mx: 2,
                         }}>
-                        Return to the results
+                        Home
                     </Button>
                     <br />
 
                     {/* Info-link */}
                     <Typography
-                        variant='body2'
+                        variant='caption'
                         onClick={handleOpenDialog}
                         sx={{
-                            marginTop: 3,
-                            color: 'rgb(202, 178, 92)',
+                            color: 'rgb(247, 247, 247)',
                             cursor: 'pointer',
                             textDecoration: 'underline',
                         }}>
-                        App Info
+                        <strong>App Info</strong>
                     </Typography>
                 </Box>
             </Box>

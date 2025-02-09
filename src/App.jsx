@@ -7,7 +7,7 @@ import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 // MUI component imports
-import { ThemeProvider, CssBaseline } from '@mui/material/'
+import { ThemeProvider, CssBaseline, Box } from '@mui/material/'
 // Internal style imports
 import AppTheme from './styles/AppTheme.jsx'
 // Internal component imports
@@ -38,16 +38,24 @@ export default function App() {
     <>
       <ThemeProvider theme={AppTheme}>
         <CssBaseline />
-        <BrowserRouter>
-          <HeaderBar />
-          <Routes>
-            <Route path='/7-wonders-scoreboard/' element={<HomePage />} />
-            <Route path='/7-wonders-scoreboard/scores' element={<ScoresPage />} />
-            <Route path='/7-wonders-scoreboard/results' element={<ResultsPage />} />
-            <Route path='*' element={<ErrorPage />} />
-          </Routes>
-          <FooterBar />
-        </BrowserRouter>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            minHeight: '100vh',
+            width: '100%',
+          }}>
+          <BrowserRouter>
+            <HeaderBar />
+            <Routes>
+              <Route path='/7-wonders-scoreboard/' element={<HomePage />} />
+              <Route path='/7-wonders-scoreboard/scores' element={<ScoresPage />} />
+              <Route path='/7-wonders-scoreboard/results' element={<ResultsPage />} />
+              <Route path='*' element={<ErrorPage />} />
+            </Routes>
+            <FooterBar />
+          </BrowserRouter>
+        </Box>
       </ThemeProvider>
     </>
   )

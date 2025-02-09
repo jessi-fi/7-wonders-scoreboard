@@ -64,6 +64,16 @@ export default function ResultsPage() {
         <>
             <Box sx={BoxStyle}>
 
+                {/* Title */}
+                <Typography
+                    variant="body1"
+                    sx={{
+                        color: 'rgb(202, 178, 92)',
+                        marginBottom: 1,
+                    }}>
+                    <strong>7 Wonders Scoreboard</strong>
+                </Typography>
+
                 {/* Room code-text */}
                 <Typography variant='caption'>
                     Room Code

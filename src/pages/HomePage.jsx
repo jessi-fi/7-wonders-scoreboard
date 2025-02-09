@@ -67,6 +67,16 @@ export default function HomePage() {
         <>
             <Box sx={BoxStyle}>
 
+                {/* Title */}
+                <Typography
+                    variant="body1"
+                    sx={{
+                        color: 'rgb(202, 178, 92)',
+                        marginBottom: 2,
+                    }}>
+                    <strong>7 Wonders Scoreboard</strong>
+                </Typography>
+
                 {/* Player name-texts */}
                 <Typography
                     variant='body1'>
@@ -91,13 +101,13 @@ export default function HomePage() {
                     value={name}
                     sx={{
                         width: '16ch',
+                        marginBottom: 2.5,
                     }} />
 
                 {/* Create/join-text */}
                 <Typography
                     variant='body1'
                     sx={{
-                        marginBottom: 1,
                         maxWidth: '90%',
                         marginX: 'auto',
                     }}>
@@ -119,9 +129,8 @@ export default function HomePage() {
                     {/* Create-content */}
                     <Box
                         sx={{
-                            width: 160,
+                            width: 150,
                             height: 165,
-                            my: 2,
                             marginRight: 3,
                             p: 2,
                             borderRadius: 2,
@@ -146,7 +155,8 @@ export default function HomePage() {
                             loading={loading}
                             sx={{
                                 marginTop: 4.5,
-                                backgroundColor: 'rgb(219, 201, 102)',
+                                backgroundColor: 'rgb(202, 178, 92)',
+                                color: 'rgb(247, 247, 247)',
                             }}>
                             Create
                         </Button>
@@ -155,7 +165,7 @@ export default function HomePage() {
                     {/* Join-content */}
                     <Box
                         sx={{
-                            width: 160,
+                            width: 150,
                             height: 165,
                             my: 2,
                             p: 2,
@@ -182,7 +192,8 @@ export default function HomePage() {
                             onClick={() => handleJoinButton(name, code, setLoading, navigate, showError)}
                             loading={loading}
                             sx={{
-                                backgroundColor: 'rgb(219, 201, 102)',
+                                backgroundColor: 'rgb(202, 178, 92)',
+                                color: 'rgb(247, 247, 247)',
                                 marginTop: 1,
                             }}>
                             Join
@@ -192,9 +203,9 @@ export default function HomePage() {
 
                 {/* Scores-text */}
                 <Typography
-                    variant='body1'
+                    variant='caption'
                     sx={{
-                        marginTop: 1,
+                        marginLeft: 6,
                     }}>
                     <strong>Continue adding the unfinished scores</strong>
                 </Typography>
@@ -202,7 +213,31 @@ export default function HomePage() {
                 {/* Scores-button */}
                 <Button
                     onClick={() => navigate('/7-wonders-scoreboard/scores')}>
-                    <KeyboardDoubleArrowRightIcon />
+                    <KeyboardDoubleArrowRightIcon
+                        sx={{
+                            marginBottom: 0,
+                            marginLeft: -3,
+                        }} />
+                </Button>
+                <br />
+
+                {/* Results-text */}
+                <Typography
+                    variant='caption'
+                    sx={{
+                        marginLeft: 6,
+                    }}>
+                    <strong>Return to the old results</strong>
+                </Typography>
+
+                {/* Results-button */}
+                <Button
+                    onClick={() => navigate('/7-wonders-scoreboard/results')}>
+                    <KeyboardDoubleArrowRightIcon
+                        sx={{
+                            marginBottom: 0,
+                            marginLeft: -3,
+                        }} />
                 </Button>
             </Box>
 

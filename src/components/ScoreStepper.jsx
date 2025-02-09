@@ -82,7 +82,7 @@ export default function ScoreStepper({ showError }) {
         <>
             <Box
                 sx={{
-                    marginTop: 5,
+                    marginTop: 2,
                     height: 170,
                 }}>
 
@@ -121,7 +121,7 @@ export default function ScoreStepper({ showError }) {
                         style={{
                             maxWidth: 88,
                             height: 'auto',
-                            marginBottom: 20,
+                            marginBottom: 3,
                         }} />
 
                     {/* Score-input */}
@@ -145,6 +145,7 @@ export default function ScoreStepper({ showError }) {
                         autoFocus
                         sx={{
                             width: '7ch',
+                            marginBottom: 1,
                         }} />
                 </Box>
                 <br />

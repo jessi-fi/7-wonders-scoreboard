@@ -2,7 +2,9 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 // MUI component imports
-import { Box, Typography } from '@mui/material/'
+import { Box, Typography, Button } from '@mui/material/'
+// MUI icon imports
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight'
 // Internal style imports
 import BoxStyle from '../styles/BoxStyle.jsx'
 // Internal component imports
@@ -68,6 +70,16 @@ export default function ScoresPage() {
         <>
             <Box sx={BoxStyle}>
 
+                {/* Title */}
+                <Typography
+                    variant="body1"
+                    sx={{
+                        color: 'rgb(202, 178, 92)',
+                        marginBottom: 1,
+                    }}>
+                    <strong>7 Wonders Scoreboard</strong>
+                </Typography>
+
                 {/* Code/name-texts */}
                 <Typography variant='caption'>
                     Room Code
@@ -81,6 +93,25 @@ export default function ScoresPage() {
 
                 {/* Score stepper */}
                 <ScoreStepper showError={showError} />
+
+                {/* Results-text */}
+                <Typography
+                    variant='caption'
+                    sx={{
+                        marginLeft: 6,
+                    }}>
+                    <strong>Return to the old results</strong>
+                </Typography>
+
+                {/* Results-button */}
+                <Button
+                    onClick={() => navigate('/7-wonders-scoreboard/results')}>
+                    <KeyboardDoubleArrowRightIcon
+                        sx={{
+                            marginBottom: 0,
+                            marginLeft: -3,
+                        }} />
+                </Button>
             </Box>
 
             {/* Error alert */}

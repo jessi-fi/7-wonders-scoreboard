@@ -1,17 +1,13 @@
 // React imports
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 // MUI component imports
-import { AppBar, Box, Typography, Button } from '@mui/material/'
+import { AppBar, Box, Typography } from '@mui/material/'
 // Internal image imports
 import WondersImage2 from '../assets/images/wonders-light2.jpg'
 // Internal component imports
 import InfoDialog from '../components/InfoDialog.jsx'
 
 export default function FooterBar() {
-
-    // Navigate hook
-    const navigate = useNavigate()
 
     // Dialog states
     const [dialogOpen, setDialogOpen] = useState(false)
@@ -54,20 +50,6 @@ export default function FooterBar() {
                         zIndex: 2,
                     }}>
 
-                    {/* Home-button */}
-                    <Button
-                        variant='contained'
-                        onClick={() => navigate('/7-wonders-scoreboard/')}
-                        sx={{
-                            backgroundColor: 'rgb(202, 178, 92)',
-                            color: 'rgb(247, 247, 247)',
-                            marginBottom: 1,
-                            mx: 2,
-                        }}>
-                        Home
-                    </Button>
-                    <br />
-
                     {/* Info-link */}
                     <Typography
                         variant='caption'
@@ -77,7 +59,7 @@ export default function FooterBar() {
                             cursor: 'pointer',
                             textDecoration: 'underline',
                         }}>
-                        <strong>App Info</strong>
+                        App Info
                     </Typography>
                 </Box>
             </Box>

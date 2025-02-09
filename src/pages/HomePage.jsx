@@ -201,44 +201,53 @@ export default function HomePage() {
                     </Box>
                 </Box>
 
-                {/* Scores-text */}
-                <Typography
-                    variant='caption'
+                {/* Icon button-content */}
+                <Box
                     sx={{
-                        marginLeft: 6,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
                     }}>
-                    <strong>Continue adding the unfinished scores</strong>
-                </Typography>
 
-                {/* Scores-button */}
-                <Button
-                    onClick={() => navigate('/7-wonders-scoreboard/scores')}>
-                    <KeyboardDoubleArrowRightIcon
+                    {/* Scores-content */}
+                    <Box
                         sx={{
-                            marginBottom: 0,
-                            marginLeft: -3,
-                        }} />
-                </Button>
-                <br />
+                            width: 150,
+                            height: 70,
+                            marginRight: 3,
+                        }}>
 
-                {/* Results-text */}
-                <Typography
-                    variant='caption'
-                    sx={{
-                        marginLeft: 6,
-                    }}>
-                    <strong>Return to the old results</strong>
-                </Typography>
+                        {/* Scores-text */}
+                        <Typography variant='body2'>
+                            Return to add the unfinished <strong>scores</strong>.
+                        </Typography>
 
-                {/* Results-button */}
-                <Button
-                    onClick={() => navigate('/7-wonders-scoreboard/results')}>
-                    <KeyboardDoubleArrowRightIcon
+                        {/* Scores-icon button */}
+                        <Button
+                            onClick={() => navigate('/7-wonders-scoreboard/scores')}>
+                            <KeyboardDoubleArrowRightIcon />
+                        </Button>
+                    </Box>
+
+                    {/* Results-content */}
+                    <Box
                         sx={{
-                            marginBottom: 0,
-                            marginLeft: -3,
-                        }} />
-                </Button>
+                            width: 150,
+                            height: 70,
+                        }}>
+
+                        {/* Results-text */}
+                        <Typography variant='body2'>
+                            Return to the old <strong>results</strong>.
+                        </Typography>
+
+                        {/* Results-icon button */}
+                        <Button
+                            onClick={() => navigate('/7-wonders-scoreboard/results')}>
+                            <KeyboardDoubleArrowRightIcon />
+                        </Button>
+                    </Box>
+                </Box>
             </Box>
 
             {/* Error alert */}

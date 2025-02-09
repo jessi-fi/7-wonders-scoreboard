@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 // MUI component imports
 import { Box, Typography, Button } from '@mui/material/'
 // MUI icon imports
-import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight'
+import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft'
 // Internal style imports
 import BoxStyle from '../styles/BoxStyle.jsx'
 // Internal component imports
@@ -94,24 +94,38 @@ export default function ScoresPage() {
                 {/* Score stepper */}
                 <ScoreStepper showError={showError} />
 
-                {/* Results-text */}
-                <Typography
-                    variant='caption'
+                {/* Scores/home-content */}
+                <Box
                     sx={{
-                        marginLeft: 6,
+                        marginTop: 1,
                     }}>
-                    <strong>Return to the old results</strong>
-                </Typography>
 
-                {/* Results-button */}
-                <Button
-                    onClick={() => navigate('/7-wonders-scoreboard/results')}>
-                    <KeyboardDoubleArrowRightIcon
+                    {/* Scores-text */}
+                    <Typography variant='caption'>
+                        (one set of scores per player)
+                    </Typography>
+                    <br />
+
+                    {/* Home-text */}
+                    <Typography
+                        variant='body2'
                         sx={{
-                            marginBottom: 0,
-                            marginLeft: -3,
-                        }} />
-                </Button>
+                            marginRight: 6,
+                            marginTop: 1,
+                        }}>
+
+                        {/* Home-button */}
+                        <Button
+                            onClick={() => navigate('/7-wonders-scoreboard/')}>
+                            <KeyboardDoubleArrowLeftIcon
+                                sx={{
+                                    marginBottom: 0.3,
+                                    marginRight: -3,
+                                }} />
+                        </Button>
+                        Return to the <strong>home</strong>.
+                    </Typography>
+                </Box>
             </Box>
 
             {/* Error alert */}

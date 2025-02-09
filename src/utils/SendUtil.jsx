@@ -15,7 +15,7 @@ export const handleSendButton = async (steps, scores, setLoading, navigate, show
     // Set correct error in case of failure
     catch (error) {
         if (error.message.includes('Scores already exist')) {
-            showError('The scores have already been sent, go to the home or results.')
+            showError('The scores have already been sent, return to the home.')
         }
         else {
             showError('Sending the scores failed, try again.')

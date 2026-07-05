@@ -39,6 +39,7 @@ export default function ResultsPage() {
             setRoom(storedRoom)
             const loadScores = async () => {
             try {
+                console.log('Loading scores...')
                 // Check if room exist
                 const roomExists = await fetchCode(storedRoom)
                 // Navigate to home page if room does not exist

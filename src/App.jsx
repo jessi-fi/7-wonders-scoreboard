@@ -1,6 +1,6 @@
 // React imports
 import React, { useEffect, useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 // Font imports
 import '@fontsource/roboto/300.css'
 import '@fontsource/roboto/400.css'
@@ -45,7 +45,7 @@ export default function App() {
             minHeight: '100vh',
             width: '100%',
           }}>
-          <BrowserRouter>
+          <HashRouter>
             <HeaderBar />
             <Routes>
               <Route path='/7-wonders-scoreboard/' element={<HomePage />} />
@@ -54,7 +54,7 @@ export default function App() {
               <Route path='*' element={<ErrorPage />} />
             </Routes>
             <FooterBar />
-          </BrowserRouter>
+          </HashRouter>
         </Box>
       </ThemeProvider>
     </>

@@ -43,5 +43,5 @@ export const handleCreateButton = async (name, setLoading, navigate, showError) 
     }
     // Navigate to scores if creating room succeeded
     setLoading(false)
-    navigate('/7-wonders-scoreboard/scores')
+    navigate('/scores')
 }

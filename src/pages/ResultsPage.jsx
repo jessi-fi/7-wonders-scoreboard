@@ -33,7 +33,7 @@ export default function ResultsPage() {
             // Navigate to home page if user does not have room
             if (!storedRoom) {
                 console.error('User does not have room')
-                navigate('/7-wonders-scoreboard/', { state: { error: 'A room is required.' } })
+                navigate('/', { state: { error: 'A room is required.' } })
                 return
             }
             setRoom(storedRoom)
@@ -45,7 +45,7 @@ export default function ResultsPage() {
                 // Navigate to home page if room does not exist
                 if (!roomExists) {
                     console.error('Room does not exist')
-                    navigate('/7-wonders-scoreboard/', { state: { error: 'A room is required.' } })
+                    navigate('/', { state: { error: 'A room is required.' } })
                     return
                 }
                 // Fetch scores
@@ -110,7 +110,7 @@ export default function ResultsPage() {
 
                         {/* Home-button */}
                         <Button
-                            onClick={() => navigate('/7-wonders-scoreboard/')}>
+                            onClick={() => navigate('/')}>
                             <KeyboardDoubleArrowLeftIcon
                                 sx={{
                                     marginBottom: 0.3,

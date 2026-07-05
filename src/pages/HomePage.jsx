@@ -224,7 +224,7 @@ export default function HomePage() {
 
                         {/* Scores-icon button */}
                         <Button
-                            onClick={() => navigate('/7-wonders-scoreboard/scores')}>
+                            onClick={() => navigate('/scores')}>
                             <KeyboardDoubleArrowRightIcon />
                         </Button>
                     </Box>
@@ -243,7 +243,7 @@ export default function HomePage() {
 
                         {/* Results-icon button */}
                         <Button
-                            onClick={() => navigate('/7-wonders-scoreboard/results')}>
+                            onClick={() => navigate('/results')}>
                             <KeyboardDoubleArrowRightIcon />
                         </Button>
                     </Box>

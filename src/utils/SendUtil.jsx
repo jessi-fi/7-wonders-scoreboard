@@ -26,5 +26,5 @@ export const handleSendButton = async (steps, scores, setLoading, navigate, show
     }
     // Navigate to results if adding scores succeeded
     setLoading(false)
-    navigate('/7-wonders-scoreboard/results')
+    navigate('/results')
 }

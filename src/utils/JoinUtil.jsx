@@ -58,5 +58,5 @@ export const handleJoinButton = async (name, code, setLoading, navigate, showErr
     }
     // Navigate to scores if joining room succeeded
     setLoading(false)
-    navigate('/7-wonders-scoreboard/scores')
+    navigate('/scores')
 }

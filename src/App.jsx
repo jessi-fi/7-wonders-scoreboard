@@ -48,9 +48,9 @@ export default function App() {
           <HashRouter>
             <HeaderBar />
             <Routes>
-              <Route path='/7-wonders-scoreboard/' element={<HomePage />} />
-              <Route path='/7-wonders-scoreboard/scores' element={<ScoresPage />} />
-              <Route path='/7-wonders-scoreboard/results' element={<ResultsPage />} />
+              <Route path='/' element={<HomePage />} />
+              <Route path='/scores' element={<ScoresPage />} />
+              <Route path='/results' element={<ResultsPage />} />
               <Route path='*' element={<ErrorPage />} />
             </Routes>
             <FooterBar />

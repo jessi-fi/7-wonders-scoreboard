@@ -29,7 +29,6 @@ export default function ResultsPage() {
 
     // Get latest room code from local storage
     useEffect(() => {
-        const loadRoom = async () => {
             const storedRoom = localStorage.getItem('lastRoom')
             // Navigate to home page if user does not have room
             if (!storedRoom) {
@@ -38,6 +37,7 @@ export default function ResultsPage() {
                 return
             }
             setRoom(storedRoom)
+            const loadScores = async () => {
             try {
                 // Check if room exist
                 const roomExists = await fetchCode(storedRoom)
@@ -48,12 +48,9 @@ export default function ResultsPage() {
                     return
                 }
                 // Fetch scores
-                const loadScores = async () => {
-                    const scores = await fetchScores(storedRoom)
-                    setScores(scores)
-                }
-                await loadScores()
-                setInterval(loadScores, 3000)
+                const scores = await fetchScores(storedRoom)
+                console.log('Fetched scores:', scores)
+                setScores(scores)
             }
             // Set error in case of failure
             catch (error) {
@@ -63,8 +60,12 @@ export default function ResultsPage() {
                 setLoading(false)
             }
         }
-        loadRoom()
-    }, [])
+        loadScores()
+        // Refresh scores every 3 seconds
+        const interval = setInterval(loadScores, 3000)
+        // Cleanup interval when component unmounts
+        return () => clearInterval(interval)
+    }, [navigate])
 
     return (
         <>

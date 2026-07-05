@@ -48,8 +48,12 @@ export default function ResultsPage() {
                     return
                 }
                 // Fetch scores
-                const scores = await fetchScores(storedRoom)
-                setScores(scores)
+                const loadScores = async () => {
+                    const scores = await fetchScores(storedRoom)
+                    setScores(scores)
+                }
+                await loadScores()
+                setInterval(loadScores, 3000)
             }
             // Set error in case of failure
             catch (error) {
